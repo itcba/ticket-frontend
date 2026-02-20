@@ -1,6 +1,10 @@
 
 import api from '../utils/api'
 
+export const getTickets = () => api.get('/tickets');
+export const getTicket = (id) => api.get(`/tickets/${id}`);
+export const createTicket = (data) => api.post('/tickets', data);
+
 //auth api endpoints
 export const authAPI = {
   login: (credentials) => api.post("/login", credentials),
